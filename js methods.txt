@@ -1,0 +1,103 @@
+document.querySelector('tagName'); , document.querySelectorAll
+querySelector:Returns the first matching Element node within the node's subtree. If no matching node is found, null is returned.
+querySelectorAll:Returns a NodeList containing all matching Element nodes within the node's subtree, or an empty NodeList if no matches are found.
+Note: The NodeList returned by querySelectorAll() is not live. This is different from other DOM querying methods that return live node lists.	
+"live" means node added in DOM runtime and can work on that newley added node 
+
+variable.addEventListener('event',function);
+
+variable.textContent --> retrieves textcontent of that DOM variable. (eg. para.textContent where para = document.querySelector('p');
+
+document.createElement('p');
+
+document.body.appendChild(para);
+
+
+var userGuess = Number(className.value); //gives u the number value of the objext specified in the arguement.
+
+className.focus(); //focus on the class..eg. guessField.focus() will make the input field active with class guessField for the user to input..focus() is avail only for form elements.
+
+resetButton.parentNode.removeChild(resetButton);
+
+typeof(variable);
+
+var myString = myNum.toString(); 
+
+
+string.length;
+
+var str = 'Mozzilla';
+str.indexOf('zilla');  result-> 2 i.e index .. -1 if string not found
+
+str.slice(0,3); result-> moz as 0,1,2 will be sliced not including 3. 
+str.slice(0,-1); slice from behind the first letter.
+str.slice(2); result-> zilla including 2 till the end.
+
+varble.toLowerCase() and varble.toUpperCase();
+
+str.replace('moz','van'); //replaces strings.
+
+var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+var myArray = myData.split(','); //returns an array
+
+var myNewString = myArray.join(';'); //will join all elements of an array using ;
+
+var newLength = myArray.push("Bristol"); //as push() returns new array length. 
+
+var removedItem = myArray.pop(); // pop() returns the removed item 
+
+var newLength = myArray.unshift('Edinburgh'); //as unshift() returns new array length.
+
+var removedItem = myArray.shift(); // as shift() returns the removed item.
+
+var num = 5.56789;
+var n = num.toFixed(2); //The result of n will be: 5.57v
+
+THIS BELOW CODE WONT WORK
+if(x === 5 || 7 || 10 ||20) {
+  // run my code
+}
+
+THIS BELOW CODE IS THE RIGHT WAY TO DO IT
+if(x === 5 || x === 7 || x === 10 ||x === 20) {
+  // run my code
+}
+
+
+function scope depends on where it is defined and not where it is called. eg. Below code is error
+
+function myBigFunction() {
+  var myValue;
+
+  subFunction1();
+  subFunction2();
+  subFunction3();
+}
+
+function subFunction1() {
+  console.log(myValue);
+}
+
+function subFunction2() {
+  console.log(myValue);
+}
+
+////////////////////////////
+
+below code is correct.
+
+function myBigFunction() {
+  var myValue = 1;
+      
+  subFunction1(myValue);
+  subFunction2(myValue);
+  subFunction3(myValue);
+}
+
+function subFunction1(value) {
+  console.log(value);
+}
+
+function subFunction2(value) {
+  console.log(value);
+}
